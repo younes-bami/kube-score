@@ -6,9 +6,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	"github.com/zegl/kube-score/config"
-	ks "github.com/zegl/kube-score/domain"
-	"github.com/zegl/kube-score/scorecard"
+	"github.com/younes-bami/kube-score/config"
+	ks "github.com/younes-bami/kube-score/domain"
+	"github.com/younes-bami/kube-score/scorecard"
 )
 
 func TestStableVersionOldKubernetesVersion(t *testing.T) {

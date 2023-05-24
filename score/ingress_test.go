@@ -3,7 +3,7 @@ package score
 import (
 	"testing"
 
-	"github.com/zegl/kube-score/scorecard"
+	"github.com/younes-bami/kube-score/scorecard"
 )
 
 func TestIngressTargetsService(t *testing.T) {

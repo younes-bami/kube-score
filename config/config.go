@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	ks "github.com/zegl/kube-score/domain"
+	ks "github.com/younes-bami/kube-score/domain"
 )
 
 type Configuration struct {

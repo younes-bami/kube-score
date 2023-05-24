@@ -1,14 +1,16 @@
 package cronjob
 
 import (
-	ks "github.com/zegl/kube-score/domain"
-	"github.com/zegl/kube-score/score/checks"
-	"github.com/zegl/kube-score/scorecard"
+	ks "github.com/younes-bami/kube-score/domain"
+	"github.com/younes-bami/kube-score/score/checks"
+	"github.com/younes-bami/kube-score/scorecard"
 )
 
 func Register(allChecks *checks.Checks) {
 	allChecks.RegisterCronJobCheck("CronJob has deadline", `Makes sure that all CronJobs has a configured deadline`, cronJobHasDeadline)
 	allChecks.RegisterCronJobCheck("CronJob RestartPolicy", `Makes sure CronJobs have a valid RestartPolicy`, cronJobHasRestartPolicy)
+	allChecks.RegisterCronJobCheck("CronJob Backofflimit", `Makes sure CronJobs have a valid backofflimit value `, cronJobMinBackofflimit)
+
 }
 
 func cronJobHasDeadline(job ks.CronJob) (score scorecard.TestScore, err error) {
@@ -17,6 +19,25 @@ func cronJobHasDeadline(job ks.CronJob) (score scorecard.TestScore, err error) {
 		score.AddComment("", "The CronJob should have startingDeadlineSeconds configured",
 			"This makes sure that jobs are automatically cancelled if they can not be scheduled")
 		return
+	}
+
+	score.Grade = scorecard.GradeAllOK
+	return
+}
+
+func cronJobMinBackofflimit(job ks.CronJob) (score scorecard.TestScore, err error) {
+	if job.Backofflimit() == nil {
+		score.Grade = scorecard.GradeCritical
+		score.AddComment("", "The CronJob should have backofflimit configured",
+			"Please fix it")
+		return
+	} else {
+		if job.Backofflimit() < 2 {
+			score.Grade = scorecard.GradeCritical
+			score.AddComment("", "The CronJob should have backofflimit greater than 2 ",
+				"Please fix it")
+			return
+		}
 	}
 
 	score.Grade = scorecard.GradeAllOK

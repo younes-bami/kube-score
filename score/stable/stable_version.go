@@ -3,10 +3,10 @@ package stable
 import (
 	"fmt"
 
-	"github.com/zegl/kube-score/config"
-	"github.com/zegl/kube-score/domain"
-	"github.com/zegl/kube-score/score/checks"
-	"github.com/zegl/kube-score/scorecard"
+	"github.com/younes-bami/kube-score/config"
+	"github.com/younes-bami/kube-score/domain"
+	"github.com/younes-bami/kube-score/score/checks"
+	"github.com/younes-bami/kube-score/scorecard"
 )
 
 func Register(kubernetesVersion config.Semver, allChecks *checks.Checks) {

@@ -3,14 +3,14 @@ package container
 import (
 	"testing"
 
-	ks "github.com/zegl/kube-score/domain"
+	ks "github.com/younes-bami/kube-score/domain"
 	"k8s.io/apimachinery/pkg/api/resource"
 
 	"github.com/stretchr/testify/assert"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	"github.com/zegl/kube-score/scorecard"
+	"github.com/younes-bami/kube-score/scorecard"
 )
 
 type podSpeccer struct {

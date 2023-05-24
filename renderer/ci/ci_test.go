@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/zegl/kube-score/domain"
-	"github.com/zegl/kube-score/scorecard"
+	"github.com/younes-bami/kube-score/domain"
+	"github.com/younes-bami/kube-score/scorecard"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 

@@ -15,15 +15,15 @@ import (
 	flag "github.com/spf13/pflag"
 	"golang.org/x/term"
 
-	"github.com/zegl/kube-score/config"
-	ks "github.com/zegl/kube-score/domain"
-	"github.com/zegl/kube-score/parser"
-	"github.com/zegl/kube-score/renderer/ci"
-	"github.com/zegl/kube-score/renderer/human"
-	"github.com/zegl/kube-score/renderer/json_v2"
-	"github.com/zegl/kube-score/renderer/sarif"
-	"github.com/zegl/kube-score/score"
-	"github.com/zegl/kube-score/scorecard"
+	"github.com/younes-bami/kube-score/config"
+	ks "github.com/younes-bami/kube-score/domain"
+	"github.com/younes-bami/kube-score/parser"
+	"github.com/younes-bami/kube-score/renderer/ci"
+	"github.com/younes-bami/kube-score/renderer/human"
+	"github.com/younes-bami/kube-score/renderer/json_v2"
+	"github.com/younes-bami/kube-score/renderer/sarif"
+	"github.com/younes-bami/kube-score/score"
+	"github.com/younes-bami/kube-score/scorecard"
 )
 
 func main() {

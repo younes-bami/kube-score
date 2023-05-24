@@ -4,10 +4,10 @@ import (
 	networkingv1 "k8s.io/api/networking/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	ks "github.com/zegl/kube-score/domain"
-	"github.com/zegl/kube-score/score/checks"
-	"github.com/zegl/kube-score/score/internal"
-	"github.com/zegl/kube-score/scorecard"
+	ks "github.com/younes-bami/kube-score/domain"
+	"github.com/younes-bami/kube-score/score/checks"
+	"github.com/younes-bami/kube-score/score/internal"
+	"github.com/younes-bami/kube-score/scorecard"
 )
 
 func Register(allChecks *checks.Checks, netpols ks.NetworkPolicies, pods ks.Pods, podspecers ks.PodSpeccers) {

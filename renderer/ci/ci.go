@@ -8,7 +8,7 @@ import (
 	"io"
 	"sort"
 
-	"github.com/zegl/kube-score/scorecard"
+	"github.com/younes-bami/kube-score/scorecard"
 )
 
 // "Machine" / CI friendly output

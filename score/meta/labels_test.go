@@ -7,8 +7,8 @@ import (
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	"github.com/zegl/kube-score/domain"
-	"github.com/zegl/kube-score/scorecard"
+	"github.com/younes-bami/kube-score/domain"
+	"github.com/younes-bami/kube-score/scorecard"
 )
 
 func TestInvalidLabel(t *testing.T) {

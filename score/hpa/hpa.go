@@ -1,9 +1,9 @@
 package hpa
 
 import (
-	"github.com/zegl/kube-score/domain"
-	"github.com/zegl/kube-score/score/checks"
-	"github.com/zegl/kube-score/scorecard"
+	"github.com/younes-bami/kube-score/domain"
+	"github.com/younes-bami/kube-score/score/checks"
+	"github.com/younes-bami/kube-score/scorecard"
 )
 
 func Register(allChecks *checks.Checks, allTargetableObjs []domain.BothMeta) {

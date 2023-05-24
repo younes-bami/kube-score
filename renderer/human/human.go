@@ -12,7 +12,7 @@ import (
 	"github.com/eidolon/wordwrap"
 	"github.com/fatih/color"
 
-	"github.com/zegl/kube-score/scorecard"
+	"github.com/younes-bami/kube-score/scorecard"
 )
 
 func Human(scoreCard *scorecard.Scorecard, verboseOutput int, termWidth int, useColors bool) (io.Reader, error) {

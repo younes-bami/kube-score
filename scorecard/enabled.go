@@ -3,7 +3,7 @@ package scorecard
 import (
 	"strings"
 
-	ks "github.com/zegl/kube-score/domain"
+	ks "github.com/younes-bami/kube-score/domain"
 )
 
 func (so *ScoredObject) isEnabled(check ks.Check, annotations, childAnnotations map[string]string) bool {
