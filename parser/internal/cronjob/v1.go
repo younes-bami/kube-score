@@ -16,8 +16,8 @@ func (c CronJobV1) StartingDeadlineSeconds() *int64 {
 	return c.Obj.Spec.StartingDeadlineSeconds
 }
 
-func (c CronJobV1) Backofflimit() *int64 {
-	return c.Obj.Spec.backoffLimit
+func (c CronJobV1) BackoffLimit() *int32 {
+	return c.Obj.Spec.JobTemplate.Spec.BackoffLimit
 }
 
 func (c CronJobV1) FileLocation() ks.FileLocation {
