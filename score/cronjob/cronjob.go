@@ -29,13 +29,13 @@ func cronJobMinBackofflimit(job ks.CronJob) (score scorecard.TestScore, err erro
 	if job.BackoffLimit() == nil {
 		score.Grade = scorecard.GradeCritical
 		score.AddComment("", "The CronJob should have backofflimit configured",
-			"Please fix it")
+			"!!!!!!")
 		return
 	} else {
 		if *job.BackoffLimit() < 2 {
 			score.Grade = scorecard.GradeCritical
 			score.AddComment("", "The CronJob should have backofflimit greater than 2 ",
-				"Please fix it")
+				"!!!!!!!")
 			return
 		}
 	}
